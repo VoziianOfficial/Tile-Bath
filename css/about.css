@@ -1924,3 +1924,49 @@
         font-size: 1.5rem !important;
     }
 }
+
+/* =========================
+   FIX ABOUT STORY PHOTO JUMP
+========================= */
+
+.about-story .about-story-media,
+.about-story .about-story-media.aos-init,
+.about-story .about-story-media.aos-animate {
+    position: relative !important;
+    overflow: hidden !important;
+    height: clamp(360px, 38vw, 520px) !important;
+    min-height: 0 !important;
+    transform: none !important;
+    translate: none !important;
+    rotate: none !important;
+    scale: none !important;
+    opacity: 1 !important;
+}
+
+.about-story .about-story-media>img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: none !important;
+    scale: 1 !important;
+    transition: filter 0.35s var(--ease-out) !important;
+}
+
+.about-story .about-story-media:hover>img {
+    transform: none !important;
+    scale: 1 !important;
+    filter: saturate(1.03) contrast(1.03);
+}
+
+.about-story .about-story-media::after {
+    z-index: 2 !important;
+}
+
+.about-story .about-story-badge {
+    z-index: 3 !important;
+}

@@ -1893,3 +1893,69 @@
     color: var(--color-dark) !important;
     stroke: currentColor !important;
 }
+
+/* =========================
+   SAFE FIX — SERVICES DIRECTORY CARD CONTENT
+   Keeps original layout, only fixes readability
+========================= */
+
+.services-directory .service-route-card.image-card {
+    color: var(--color-text-light) !important;
+}
+
+/* Сделать overlay чуть темнее, но не ломать карточку */
+.services-directory .service-route-card.image-card::after {
+    background:
+        linear-gradient(180deg,
+            rgba(28, 26, 25, 0.08) 0%,
+            rgba(28, 26, 25, 0.42) 48%,
+            rgba(28, 26, 25, 0.82) 100%),
+        linear-gradient(90deg,
+            rgba(28, 26, 25, 0.36) 0%,
+            rgba(28, 26, 25, 0.08) 62%,
+            transparent 100%) !important;
+}
+
+/* Контент поверх фото */
+.services-directory .service-route-card .image-card-content {
+    position: relative !important;
+    z-index: 3 !important;
+    color: var(--color-text-light) !important;
+}
+
+/* Заголовки светлые */
+.services-directory .service-route-card .image-card-content h3 {
+    color: var(--color-text-light) !important;
+    min-height: 2em;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Текст светлый и одинаковый по высоте */
+.services-directory .service-route-card .image-card-content p {
+    color: rgba(243, 238, 231, 0.76) !important;
+    min-height: 4.2em;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Иконки видимые, но без перестройки */
+.services-directory .service-route-card .image-card-icon {
+    z-index: 4 !important;
+    color: var(--color-accent-light) !important;
+    border-color: rgba(243, 238, 231, 0.28) !important;
+    background: rgba(28, 26, 25, 0.34) !important;
+}
+
+.services-directory .service-route-card .image-card-icon i,
+.services-directory .service-route-card .image-card-icon svg {
+    color: var(--color-accent-light) !important;
+    stroke: currentColor !important;
+}
+
+/* Если номер всё ещё есть — скрываем, но не трогаем layout */
+.services-directory .service-route-card .service-card-number {
+    display: none !important;
+}
