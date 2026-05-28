@@ -1281,3 +1281,451 @@
     }
 }
 
+/* =========================
+   SERVICE REQUEST — HORIZONTAL NO FORM
+   For all individual service pages
+========================= */
+
+.service-request-horizontal {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(38px, 5vw, 72px) 0 !important;
+    background:
+        radial-gradient(circle at 12% 12%, rgba(183, 155, 127, 0.18), transparent 32%),
+        radial-gradient(circle at 92% 18%, rgba(246, 242, 236, 0.08), transparent 30%),
+        linear-gradient(135deg, #24211F 0%, #2E2926 52%, #3A342F 100%);
+    color: var(--color-text-light);
+}
+
+.service-request-horizontal::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(243, 238, 231, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(243, 238, 231, 0.028) 1px, transparent 1px);
+    background-size: 54px 54px;
+    opacity: 0.2;
+}
+
+.service-request-horizontal::after {
+    content: "Provider Review";
+    position: absolute;
+    right: -0.04em;
+    bottom: -0.2em;
+    color: rgba(243, 238, 231, 0.035);
+    font-family: var(--font-heading);
+    font-size: clamp(4.8rem, 12vw, 13rem);
+    line-height: 1;
+    letter-spacing: -0.08em;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.service-request-horizontal .container-wide {
+    position: relative;
+    z-index: 2;
+}
+
+.service-request-horizontal__shell {
+    display: grid;
+    grid-template-columns: minmax(0, 0.86fr) minmax(520px, 1fr) auto;
+    gap: clamp(24px, 4vw, 54px);
+    align-items: center;
+}
+
+.service-request-horizontal__copy {
+    display: grid;
+    gap: 14px;
+}
+
+.service-request-horizontal .eyebrow {
+    color: var(--color-accent-light);
+}
+
+.service-request-horizontal .eyebrow::before {
+    background: currentColor;
+}
+
+.service-request-horizontal .section-title {
+    max-width: 760px;
+    color: var(--color-text-light);
+    font-size: clamp(2.3rem, 4.2vw, 4.8rem);
+    font-weight: 500;
+    line-height: 0.96;
+}
+
+.service-request-horizontal__copy p {
+    max-width: 680px;
+    color: rgba(243, 238, 231, 0.68);
+    font-size: 0.95rem;
+    line-height: 1.62;
+}
+
+/* horizontal rail, not a form/card grid */
+.service-request-horizontal__rail {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid rgba(243, 238, 231, 0.16);
+    border-bottom: 1px solid rgba(243, 238, 231, 0.16);
+}
+
+.service-request-horizontal__rail article {
+    position: relative;
+    min-height: 176px;
+    display: grid;
+    align-content: end;
+    gap: 8px;
+    padding: clamp(18px, 2vw, 24px);
+    border-right: 1px solid rgba(243, 238, 231, 0.13);
+    background: transparent;
+    overflow: hidden;
+    transition:
+        background 0.28s var(--ease-out),
+        transform 0.28s var(--ease-out);
+}
+
+.service-request-horizontal__rail article:last-child {
+    border-right: 0;
+}
+
+.service-request-horizontal__rail article::after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-accent-light), transparent);
+    opacity: 0;
+    transition: opacity 0.28s var(--ease-out);
+}
+
+.service-request-horizontal__rail article:hover {
+    background: rgba(243, 238, 231, 0.055);
+    transform: translateY(-2px);
+}
+
+.service-request-horizontal__rail article:hover::after {
+    opacity: 1;
+}
+
+.service-request-horizontal__rail i,
+.service-request-horizontal__rail svg {
+    width: 30px;
+    height: 30px;
+    color: var(--color-accent-light);
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    stroke-width: 1.75;
+}
+
+.service-request-horizontal__rail span {
+    color: var(--color-text-light);
+    font-family: var(--font-heading);
+    font-size: clamp(1.35rem, 1.8vw, 1.8rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.035em;
+}
+
+.service-request-horizontal__rail p {
+    color: rgba(243, 238, 231, 0.62);
+    font-size: 0.84rem;
+    line-height: 1.48;
+}
+
+.service-request-horizontal__actions {
+    display: grid;
+    gap: 10px;
+    min-width: 210px;
+}
+
+.service-request-horizontal__actions .btn {
+    width: 210px;
+    min-height: 44px;
+}
+
+.service-request-horizontal .btn-outline {
+    --btn-color: var(--color-text-light);
+    --btn-border: rgba(243, 238, 231, 0.34);
+    color: var(--color-text-light) !important;
+    border-color: rgba(243, 238, 231, 0.34) !important;
+}
+
+.service-request-horizontal .btn-outline:hover {
+    color: var(--color-dark) !important;
+    border-color: var(--color-accent) !important;
+}
+
+.service-request-horizontal .btn i,
+.service-request-horizontal .btn svg {
+    color: currentColor !important;
+    stroke: currentColor !important;
+}
+
+/* Kill old form if it accidentally remains */
+.service-request-horizontal .service-form,
+.service-request-horizontal .form-card,
+.service-request-horizontal .service-request-note {
+    display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 1180px) {
+    .service-request-horizontal__shell {
+        grid-template-columns: 1fr;
+    }
+
+    .service-request-horizontal__rail {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .service-request-horizontal__actions {
+        display: flex;
+        flex-wrap: wrap;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 760px) {
+    .service-request-horizontal__rail {
+        grid-template-columns: 1fr;
+    }
+
+    .service-request-horizontal__rail article {
+        min-height: auto;
+        border-right: 0;
+        border-bottom: 1px solid rgba(243, 238, 231, 0.13);
+    }
+
+    .service-request-horizontal__rail article:last-child {
+        border-bottom: 0;
+    }
+
+    .service-request-horizontal__actions {
+        display: grid;
+    }
+
+    .service-request-horizontal__actions .btn {
+        width: 100%;
+    }
+}
+
+/* =========================
+   SERVICE REQUEST — SLIM DARK SHINE
+   Very compact, no form, no photo, no map
+========================= */
+
+.service-request-slim {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(22px, 2.8vw, 38px) 0 !important;
+    background:
+        radial-gradient(circle at 12% 0%, rgba(183, 155, 127, 0.20), transparent 34%),
+        linear-gradient(135deg, #1C1A19 0%, #24211F 48%, #2E2926 100%) !important;
+    color: var(--color-text-light) !important;
+}
+
+/* moving shine */
+.service-request-slim::before {
+    content: "";
+    position: absolute;
+    inset: -60% auto -60% -38%;
+    width: 34%;
+    pointer-events: none;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.12),
+            rgba(183, 155, 127, 0.24),
+            transparent);
+    transform: skewX(-18deg);
+    animation: slimRequestShine 5.8s ease-in-out infinite;
+}
+
+.service-request-slim::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(90deg, rgba(243, 238, 231, 0.06) 1px, transparent 1px),
+        linear-gradient(rgba(243, 238, 231, 0.045) 1px, transparent 1px);
+    background-size: 52px 52px;
+    opacity: 0.12;
+}
+
+.service-request-slim .container-wide {
+    position: relative;
+    z-index: 2;
+}
+
+.service-request-slim__shell {
+    min-height: 128px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: clamp(18px, 3vw, 42px);
+    padding: clamp(18px, 2vw, 26px) clamp(18px, 2.5vw, 34px);
+    border: 1px solid rgba(243, 238, 231, 0.16);
+    background:
+        linear-gradient(135deg, rgba(243, 238, 231, 0.075), rgba(243, 238, 231, 0.025));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.service-request-slim__copy {
+    display: grid;
+    gap: 8px;
+}
+
+.service-request-slim .eyebrow {
+    color: var(--color-accent-light) !important;
+    font-size: 0.64rem !important;
+}
+
+.service-request-slim .eyebrow::before {
+    background: currentColor;
+}
+
+.service-request-slim h2 {
+    max-width: 680px;
+    margin: 0;
+    color: var(--color-text-light) !important;
+    font-family: var(--font-heading);
+    font-size: clamp(1.9rem, 3vw, 3.4rem);
+    font-weight: 500;
+    line-height: 0.96;
+    letter-spacing: -0.045em;
+}
+
+.service-request-slim p {
+    max-width: 680px;
+    margin: 0;
+    color: rgba(243, 238, 231, 0.68) !important;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.service-request-slim__meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.service-request-slim__meta span {
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 12px;
+    border: 1px solid rgba(243, 238, 231, 0.14);
+    background: rgba(243, 238, 231, 0.055);
+    color: rgba(243, 238, 231, 0.78);
+    font-family: var(--font-accent);
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.service-request-slim__meta i,
+.service-request-slim__meta svg {
+    width: 17px;
+    height: 17px;
+    color: var(--color-accent-light);
+    stroke: currentColor;
+}
+
+.service-request-slim__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.service-request-slim__actions .btn {
+    min-height: 40px !important;
+    padding: 11px 15px !important;
+    font-size: 0.68rem !important;
+}
+
+.service-request-slim .btn-outline {
+    color: var(--color-text-light) !important;
+    border-color: rgba(243, 238, 231, 0.34) !important;
+}
+
+.service-request-slim .btn-outline:hover {
+    color: var(--color-dark) !important;
+    border-color: var(--color-accent) !important;
+}
+
+.service-request-slim .btn i,
+.service-request-slim .btn svg {
+    color: currentColor !important;
+    stroke: currentColor !important;
+}
+
+/* убираем старую форму, если случайно осталась */
+.service-request-slim .service-form,
+.service-request-slim .form-card,
+.service-request-slim .service-request-note {
+    display: none !important;
+}
+
+@keyframes slimRequestShine {
+
+    0%,
+    62% {
+        transform: translateX(-120%) skewX(-18deg);
+        opacity: 0;
+    }
+
+    74% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(430%) skewX(-18deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1080px) {
+    .service-request-slim__shell {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .service-request-slim__meta,
+    .service-request-slim__actions {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 560px) {
+    .service-request-slim {
+        padding: 24px 0 !important;
+    }
+
+    .service-request-slim__shell {
+        padding: 20px;
+    }
+
+    .service-request-slim h2 {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .service-request-slim__meta,
+    .service-request-slim__actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .service-request-slim__actions .btn {
+        width: 100%;
+    }
+}
