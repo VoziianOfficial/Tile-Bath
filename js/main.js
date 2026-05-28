@@ -65,23 +65,105 @@
     }
 
     function setDynamicLinks() {
-        const links = document.querySelectorAll(selectors.configHref);
         const phoneRaw = config?.contact?.phoneRaw || '';
         const email = config?.contact?.email || '';
 
-        links.forEach((link) => {
-            const type = link.getAttribute('data-config-href');
+        const phoneHref = phoneRaw ? `tel:${phoneRaw}` : '';
+        const emailHref = email ? `mailto:${email}` : '';
 
-            if (type === 'phone' && phoneRaw) {
-                link.setAttribute('href', `tel:${phoneRaw}`);
+        document.querySelectorAll('[data-config-href="phone"], a[href^="tel:"]').forEach((link) => {
+            if (phoneHref) {
+                link.setAttribute('href', phoneHref);
             }
+        });
 
-            if (type === 'email' && email) {
-                link.setAttribute('href', `mailto:${email}`);
+        document.querySelectorAll('[data-config-href="email"], a[href^="mailto:"]').forEach((link) => {
+            if (emailHref) {
+                link.setAttribute('href', emailHref);
             }
         });
     }
 
+    function replaceHardcodedConfigText() {
+        const replacements = getGlobalReplacements();
+
+        if (!replacements.length) return;
+
+        const ignoredTags = new Set([
+            'SCRIPT',
+            'STYLE',
+            'NOSCRIPT',
+            'SVG',
+            'PATH',
+            'RECT',
+            'CIRCLE',
+            'DEFS',
+            'LINEARGRADIENT',
+            'STOP'
+        ]);
+
+        const walker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT,
+            {
+                acceptNode(node) {
+                    const parent = node.parentElement;
+
+                    if (!parent || ignoredTags.has(parent.tagName)) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    if (!node.nodeValue || !node.nodeValue.trim()) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            }
+        );
+
+        const textNodes = [];
+
+        while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+        }
+
+        textNodes.forEach((node) => {
+            node.nodeValue = replaceAllSafe(node.nodeValue, replacements);
+        });
+
+        const attributesToReplace = [
+            'aria-label',
+            'title',
+            'alt',
+            'placeholder',
+            'content'
+        ];
+
+        document.querySelectorAll('*').forEach((element) => {
+            attributesToReplace.forEach((attributeName) => {
+                if (!element.hasAttribute(attributeName)) return;
+
+                const currentValue = element.getAttribute(attributeName);
+                const nextValue = replaceAllSafe(currentValue, replacements);
+
+                if (nextValue !== currentValue) {
+                    element.setAttribute(attributeName, nextValue);
+                }
+            });
+        });
+
+        document.title = replaceAllSafe(document.title, replacements);
+
+        document.querySelectorAll('meta[content]').forEach((meta) => {
+            const currentValue = meta.getAttribute('content');
+            const nextValue = replaceAllSafe(currentValue, replacements);
+
+            if (nextValue !== currentValue) {
+                meta.setAttribute('content', nextValue);
+            }
+        });
+    }
     function setCurrentYear() {
         const yearElements = document.querySelectorAll(selectors.currentYear);
         const year = new Date().getFullYear();
@@ -95,7 +177,9 @@
         setTextContent();
         setDynamicLinks();
         setCurrentYear();
+        replaceHardcodedConfigText();
     }
+
 
     function renderDesktopServiceMenus() {
         if (!servicesData.length) return;
@@ -120,6 +204,61 @@
                 menu.appendChild(link);
             });
         });
+    }
+
+    function escapeRegExp(value) {
+        return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function replaceAllSafe(value, replacements) {
+        if (!value || typeof value !== 'string') return value;
+
+        let output = value;
+
+        replacements.forEach(([from, to]) => {
+            if (!from || !to || from === to) return;
+
+            output = output.replace(
+                new RegExp(escapeRegExp(from), 'g'),
+                to
+            );
+        });
+
+        return output;
+    }
+
+    function getGlobalReplacements() {
+        const companyName = config?.company?.name || '';
+        const companyId = config?.company?.companyId || '';
+        const address = config?.company?.address || '';
+        const serviceArea = config?.company?.serviceArea || '';
+
+        const phoneRaw = config?.contact?.phoneRaw || '';
+        const phoneDisplay = config?.contact?.phoneDisplay || '';
+        const phoneButtonText = config?.contact?.phoneButtonText || '';
+        const email = config?.contact?.email || '';
+
+        return [
+            ['Tile & Bath', companyName],
+            ['Tile &amp; Bath', companyName],
+            ['TB-BATH-2048', companyId],
+            ['FL-WIN-2048', companyId],
+
+            ['(888) 555-0148', phoneDisplay],
+            ['888-555-0148', phoneDisplay],
+            ['+18885550148', phoneRaw],
+
+            ['hello@tileandbath.com', email],
+
+            ['USA Service Area', address],
+            ['Available across selected areas in the United States', serviceArea],
+            [
+                'Independent bathroom remodeling provider matching across selected areas in the United States',
+                serviceArea
+            ],
+
+            ['Call Now', phoneButtonText]
+        ].filter(([, to]) => Boolean(to));
     }
 
     function renderMobileServiceMenus() {
