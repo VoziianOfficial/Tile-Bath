@@ -1051,7 +1051,7 @@ h6 {
     min-height: 48px;
     border: 1px solid rgba(46, 41, 38, 0.18);
     border-radius: 0;
-    background: rgba(246, 242, 236, 0.62);
+    background: rgba(255, 255, 255, 0.72);
     color: var(--color-text);
     padding: 13px 15px;
     outline: none;
@@ -1066,12 +1066,12 @@ h6 {
 }
 
 .form-control::placeholder {
-    color: rgba(140, 129, 119, 0.74);
+    color: rgba(140, 129, 119, 0.75);
 }
 
 .form-control:focus {
     border-color: var(--color-accent);
-    background: rgba(246, 242, 236, 0.9);
+    background: rgba(255, 255, 255, 0.86);
     box-shadow: 0 0 0 4px rgba(183, 155, 127, 0.18);
 }
 
@@ -3049,4 +3049,598 @@ footer .brand span:last-child,
 .site-footer .brand span:last-child,
 .footer-brand .brand span:last-child {
     color: #F3EEE7 !important;
+}
+
+/* =========================
+   THEMED STEP ICONS (NO NUMBER BADGES)
+========================= */
+
+.section-icon {
+    width: 34px !important;
+    height: 34px !important;
+    display: inline-block;
+    flex: 0 0 34px;
+    color: var(--color-accent) !important;
+    stroke-width: 1.85 !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    transition:
+        transform 0.28s var(--ease-out),
+        color 0.28s var(--ease-out),
+        opacity 0.28s var(--ease-out);
+}
+
+.hero-stat .section-icon,
+.home-provider-slider-section .section-icon,
+.model-card-dark .section-icon {
+    color: var(--color-accent-light);
+}
+
+.process-step .section-icon,
+.evaluate-card .section-icon,
+.factor-item .section-icon,
+.services-hero-mini-card .section-icon,
+.about-hero-proof .section-icon,
+.values-stack .section-icon,
+.model-card .section-icon,
+.contact-area-steps .section-icon {
+    color: var(--color-accent-strong);
+}
+
+.hero-stat:hover .section-icon,
+.process-step:hover .section-icon,
+.evaluate-card:hover .section-icon,
+.factor-item:hover .section-icon,
+.services-hero-mini-card:hover .section-icon,
+.about-hero-proof article:hover .section-icon,
+.values-stack article:hover .section-icon,
+.model-card:hover .section-icon,
+.contact-area-steps article:hover .section-icon {
+    transform: translateY(-2px);
+    opacity: 0.92;
+}
+
+.hero-stat .section-icon,
+.process-step .section-icon,
+.evaluate-card .section-icon,
+.factor-item .section-icon,
+.services-hero-mini-card .section-icon,
+.about-hero-proof .section-icon,
+.values-stack .section-icon,
+.model-card .section-icon,
+.contact-area-steps .section-icon {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.process-step>.section-icon,
+.factor-item>.section-icon {
+    align-self: start;
+    margin-top: 2px;
+}
+
+/* =========================
+   CONTRAST UTILITIES
+========================= */
+
+.section-on-light {
+    color: var(--color-text);
+}
+
+.section-on-light .section-title,
+.section-on-light h1,
+.section-on-light h2,
+.section-on-light h3,
+.section-on-light h4,
+.section-on-light h5,
+.section-on-light h6 {
+    color: var(--color-text);
+}
+
+.section-on-light p,
+.section-on-light li,
+.section-on-light .section-kicker {
+    color: var(--color-muted);
+}
+
+.section-on-light .eyebrow {
+    color: var(--color-accent-strong);
+}
+
+.section-on-light i,
+.section-on-light svg {
+    color: var(--color-accent-strong);
+}
+
+.section-on-dark {
+    color: var(--color-text-light);
+}
+
+.section-on-dark .section-title,
+.section-on-dark h1,
+.section-on-dark h2,
+.section-on-dark h3,
+.section-on-dark h4,
+.section-on-dark h5,
+.section-on-dark h6 {
+    color: var(--color-text-light);
+}
+
+.section-on-dark p,
+.section-on-dark li,
+.section-on-dark .section-kicker {
+    color: rgba(243, 238, 231, 0.68);
+}
+
+.section-on-dark .eyebrow,
+.section-on-dark i,
+.section-on-dark svg {
+    color: var(--color-accent-light);
+}
+
+/* Contextual light-section readability fixes */
+:where(.home-service-strip,
+    .home-process,
+    .home-quote-editorial,
+    .home-faq,
+    .services-hero,
+    .services-directory,
+    .services-review,
+    .services-compare,
+    .services-request,
+    .services-faq,
+    .about-hero,
+    .about-story,
+    .about-model,
+    .about-compliance,
+    .about-values,
+    .about-faq,
+    .contact-hero,
+    .contact-main,
+    .contact-area-section,
+    .contact-faq,
+    .service-overview,
+    .service-evaluate,
+    .service-factors,
+    .service-cta-band,
+    .service-request,
+    .service-faq,
+    .legal-hero,
+    .legal-content,
+    .legal-cta) {
+    color: var(--color-text);
+}
+
+:where(.home-service-strip,
+    .home-process,
+    .home-quote-editorial,
+    .home-faq,
+    .services-hero,
+    .services-directory,
+    .services-review,
+    .services-compare,
+    .services-request,
+    .services-faq,
+    .about-hero,
+    .about-story,
+    .about-model,
+    .about-compliance,
+    .about-values,
+    .about-faq,
+    .contact-hero,
+    .contact-main,
+    .contact-area-section,
+    .contact-faq,
+    .service-overview,
+    .service-evaluate,
+    .service-factors,
+    .service-cta-band,
+    .service-request,
+    .service-faq,
+    .legal-hero,
+    .legal-content,
+    .legal-cta) :is(.section-title, h1, h2, h3, h4, h5, h6, .page-title) {
+    color: var(--color-text);
+}
+
+:where(.home-service-strip,
+    .home-process,
+    .home-quote-editorial,
+    .home-faq,
+    .services-hero,
+    .services-directory,
+    .services-review,
+    .services-compare,
+    .services-request,
+    .services-faq,
+    .about-hero,
+    .about-story,
+    .about-model,
+    .about-compliance,
+    .about-values,
+    .about-faq,
+    .contact-hero,
+    .contact-main,
+    .contact-area-section,
+    .contact-faq,
+    .service-overview,
+    .service-evaluate,
+    .service-factors,
+    .service-cta-band,
+    .service-request,
+    .service-faq,
+    .legal-hero,
+    .legal-content,
+    .legal-cta) :is(p, li, .section-kicker) {
+    color: var(--color-muted);
+}
+
+:where(.home-service-strip,
+    .home-process,
+    .home-quote-editorial,
+    .home-faq,
+    .services-hero,
+    .services-directory,
+    .services-review,
+    .services-compare,
+    .services-request,
+    .services-faq,
+    .about-hero,
+    .about-story,
+    .about-model,
+    .about-compliance,
+    .about-values,
+    .about-faq,
+    .contact-hero,
+    .contact-main,
+    .contact-area-section,
+    .contact-faq,
+    .service-overview,
+    .service-evaluate,
+    .service-factors,
+    .service-cta-band,
+    .service-request,
+    .service-faq,
+    .legal-hero,
+    .legal-content,
+    .legal-cta) .eyebrow {
+    color: var(--color-accent-strong);
+}
+
+:where(.home-service-strip,
+    .home-process,
+    .home-quote-editorial,
+    .home-faq,
+    .services-hero,
+    .services-directory,
+    .services-review,
+    .services-compare,
+    .services-request,
+    .services-faq,
+    .about-hero,
+    .about-story,
+    .about-model,
+    .about-compliance,
+    .about-values,
+    .about-faq,
+    .contact-hero,
+    .contact-main,
+    .contact-area-section,
+    .contact-faq,
+    .service-overview,
+    .service-evaluate,
+    .service-factors,
+    .service-cta-band,
+    .service-request,
+    .service-faq,
+    .legal-hero,
+    .legal-content,
+    .legal-cta) :is(i, svg, .section-icon) {
+    color: var(--color-accent-strong);
+}
+
+/* Keep dark components readable even inside light sections */
+:where(.home-service-strip,
+    .home-process,
+    .home-quote-editorial,
+    .home-faq,
+    .services-hero,
+    .services-directory,
+    .services-review,
+    .services-compare,
+    .services-request,
+    .services-faq,
+    .about-hero,
+    .about-story,
+    .about-model,
+    .about-compliance,
+    .about-values,
+    .about-faq,
+    .contact-hero,
+    .contact-main,
+    .contact-area-section,
+    .contact-faq,
+    .service-overview,
+    .service-evaluate,
+    .service-factors,
+    .service-cta-band,
+    .service-request,
+    .service-faq,
+    .legal-hero,
+    .legal-content,
+    .legal-cta) :is(.surface-card.dark,
+    .image-card,
+    .map-card,
+    .quote-floating-card,
+    .service-media-badge,
+    .service-request-note,
+    .contact-area-map-overlay,
+    .legal-section.dark-note,
+    .legal-contact-card) {
+    color: var(--color-text-light);
+}
+
+:where(.home-service-strip,
+    .home-process,
+    .home-quote-editorial,
+    .home-faq,
+    .services-hero,
+    .services-directory,
+    .services-review,
+    .services-compare,
+    .services-request,
+    .services-faq,
+    .about-hero,
+    .about-story,
+    .about-model,
+    .about-compliance,
+    .about-values,
+    .about-faq,
+    .contact-hero,
+    .contact-main,
+    .contact-area-section,
+    .contact-faq,
+    .service-overview,
+    .service-evaluate,
+    .service-factors,
+    .service-cta-band,
+    .service-request,
+    .service-faq,
+    .legal-hero,
+    .legal-content,
+    .legal-cta) :is(.surface-card.dark,
+    .image-card,
+    .map-card,
+    .quote-floating-card,
+    .service-media-badge,
+    .service-request-note,
+    .contact-area-map-overlay,
+    .legal-section.dark-note,
+    .legal-contact-card) :is(p, li, .section-kicker) {
+    color: rgba(243, 238, 231, 0.68);
+}
+
+/* Button contrast on light backgrounds */
+:where(.section-on-light,
+    .home-service-strip,
+    .home-process,
+    .home-quote-editorial,
+    .home-faq,
+    .services-hero,
+    .services-directory,
+    .services-review,
+    .services-compare,
+    .services-request,
+    .services-faq,
+    .about-hero,
+    .about-story,
+    .about-model,
+    .about-compliance,
+    .about-values,
+    .about-faq,
+    .contact-hero,
+    .contact-main,
+    .contact-area-section,
+    .contact-faq,
+    .service-overview,
+    .service-evaluate,
+    .service-factors,
+    .service-cta-band,
+    .service-request,
+    .service-faq,
+    .legal-hero,
+    .legal-content,
+    .legal-cta) .btn-primary {
+    color: var(--color-dark) !important;
+}
+
+:where(.section-on-light,
+    .home-service-strip,
+    .home-process,
+    .home-quote-editorial,
+    .home-faq,
+    .services-hero,
+    .services-directory,
+    .services-review,
+    .services-compare,
+    .services-request,
+    .services-faq,
+    .about-hero,
+    .about-story,
+    .about-model,
+    .about-compliance,
+    .about-values,
+    .about-faq,
+    .contact-hero,
+    .contact-main,
+    .contact-area-section,
+    .contact-faq,
+    .service-overview,
+    .service-evaluate,
+    .service-factors,
+    .service-cta-band,
+    .service-request,
+    .service-faq,
+    .legal-hero,
+    .legal-content,
+    .legal-cta) :is(.btn-light, .btn-outline) {
+    color: var(--color-text) !important;
+}
+
+/* Form readability on light backgrounds */
+:where(.section-on-light,
+    .home-service-strip,
+    .home-process,
+    .home-quote-editorial,
+    .home-faq,
+    .services-hero,
+    .services-directory,
+    .services-review,
+    .services-compare,
+    .services-request,
+    .services-faq,
+    .about-hero,
+    .about-story,
+    .about-model,
+    .about-compliance,
+    .about-values,
+    .about-faq,
+    .contact-hero,
+    .contact-main,
+    .contact-area-section,
+    .contact-faq,
+    .service-overview,
+    .service-evaluate,
+    .service-factors,
+    .service-cta-band,
+    .service-request,
+    .service-faq,
+    .legal-hero,
+    .legal-content,
+    .legal-cta) :is(input.form-control, textarea.form-control, select.form-control) {
+    color: var(--color-text) !important;
+    background: rgba(255, 255, 255, 0.72) !important;
+    border-color: var(--color-border) !important;
+}
+
+:where(.section-on-light,
+    .home-service-strip,
+    .home-process,
+    .home-quote-editorial,
+    .home-faq,
+    .services-hero,
+    .services-directory,
+    .services-review,
+    .services-compare,
+    .services-request,
+    .services-faq,
+    .about-hero,
+    .about-story,
+    .about-model,
+    .about-compliance,
+    .about-values,
+    .about-faq,
+    .contact-hero,
+    .contact-main,
+    .contact-area-section,
+    .contact-faq,
+    .service-overview,
+    .service-evaluate,
+    .service-factors,
+    .service-cta-band,
+    .service-request,
+    .service-faq,
+    .legal-hero,
+    .legal-content,
+    .legal-cta) :is(input.form-control, textarea.form-control, select.form-control)::placeholder {
+    color: rgba(140, 129, 119, 0.75) !important;
+}
+
+/* Decorative text tint helper */
+.section-on-light .decorative-word,
+.section-on-light .decorative-text {
+    color: rgba(28, 26, 25, 0.04);
+}
+
+.section-on-dark .decorative-word,
+.section-on-dark .decorative-text {
+    color: rgba(243, 238, 231, 0.035);
+}
+.quote-visual img,
+.quote-editorial-visual img,
+.showcase-image img,
+.image-card img,
+.home-service-card img {
+    transform: none !important;
+    scale: 1 !important;
+}
+
+/* =========================
+   FIX HERO ACTION BUTTON ICONS
+========================= */
+
+.hero-actions .btn {
+    color: inherit;
+}
+
+.hero-actions .btn i,
+.hero-actions .btn svg {
+    color: currentColor !important;
+    stroke: currentColor !important;
+}
+
+/* Если кнопка светлая/бронзовая — иконка тёмная */
+.hero-actions .btn-accent,
+.hero-actions .btn-primary:hover,
+.hero-actions .btn-light {
+    color: var(--color-dark) !important;
+}
+
+.hero-actions .btn-accent i,
+.hero-actions .btn-accent svg,
+.hero-actions .btn-primary:hover i,
+.hero-actions .btn-primary:hover svg,
+.hero-actions .btn-light i,
+.hero-actions .btn-light svg {
+    color: var(--color-dark) !important;
+    stroke: currentColor !important;
+}
+
+/* Если кнопка тёмная — иконка светлая */
+.hero-actions .btn-primary {
+    color: var(--color-text-light) !important;
+}
+
+.hero-actions .btn-primary i,
+.hero-actions .btn-primary svg {
+    color: var(--color-text-light) !important;
+    stroke: currentColor !important;
+}
+
+/* Outline на тёмном hero */
+.home-hero .hero-actions .btn-outline {
+    color: var(--color-text-light) !important;
+    border-color: rgba(243, 238, 231, 0.38) !important;
+}
+
+.home-hero .hero-actions .btn-outline i,
+.home-hero .hero-actions .btn-outline svg {
+    color: var(--color-text-light) !important;
+    stroke: currentColor !important;
+}
+
+.home-hero .hero-actions .btn-outline:hover {
+    color: var(--color-dark) !important;
+    border-color: var(--color-accent) !important;
+}
+
+.home-hero .hero-actions .btn-outline:hover i,
+.home-hero .hero-actions .btn-outline:hover svg {
+    color: var(--color-dark) !important;
+    stroke: currentColor !important;
 }
