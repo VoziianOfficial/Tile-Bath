@@ -243,21 +243,14 @@
         const comparePoints = document.querySelectorAll('.compare-points div');
 
         if (compareImage) {
-            window.gsap.fromTo(
-                compareImage,
-                { y: 34, opacity: 0.78 },
-                {
-                    y: 0,
-                    opacity: 1,
-                    ease: 'power2.out',
-                    scrollTrigger: {
-                        trigger: '.services-compare',
-                        start: 'top 80%',
-                        end: 'center center',
-                        scrub: 0.8
-                    }
-                }
-            );
+            window.gsap.killTweensOf(compareImage);
+
+            window.gsap.set(compareImage, {
+                clearProps: 'transform,translate,rotate,scale,opacity',
+                x: 0,
+                y: 0,
+                opacity: 1
+            });
         }
 
         if (compareContent) {

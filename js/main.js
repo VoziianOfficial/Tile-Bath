@@ -360,6 +360,13 @@
             if (!trigger || !menu) return;
 
             trigger.addEventListener('click', (event) => {
+                const clickedIcon = event.target.closest('i, svg');
+
+                if (!clickedIcon) {
+                    window.location.href = 'services.html';
+                    return;
+                }
+
                 event.preventDefault();
                 event.stopPropagation();
 
