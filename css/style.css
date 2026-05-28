@@ -2122,6 +2122,21 @@ section[id],
     min-height: clamp(320px, 34vw, 460px) !important;
 }
 
+.home-service-grid .home-service-card .image-card-content::before {
+    content: "";
+    position: absolute;
+    left: clamp(12px, 1.6vw, 20px);
+    right: clamp(12px, 1.6vw, 20px);
+    bottom: clamp(12px, 1.6vw, 20px);
+    height: clamp(120px, 42%, 220px);
+    z-index: 4;
+    pointer-events: none;
+    border: 1px solid rgba(246, 242, 236, 0.22);
+    background: linear-gradient(180deg, rgba(28, 26, 25, 0.42) 0%, rgba(28, 26, 25, 0.78) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
 
 
 .swiper-slide.image-card,
