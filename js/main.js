@@ -221,15 +221,14 @@
     }
 
     function initAOS() {
-        if (window.AOS && typeof window.AOS.init === 'function') {
-            window.AOS.init({
-                duration: 780,
-                easing: 'ease-out-cubic',
-                once: true,
-                offset: 80,
-                delay: 0
-            });
-        }
+        document.querySelectorAll('[data-aos]').forEach((element) => {
+            element.removeAttribute('data-aos');
+            element.removeAttribute('data-aos-delay');
+            element.removeAttribute('data-aos-duration');
+            element.classList.remove('aos-init', 'aos-animate');
+            element.style.opacity = '1';
+            element.style.transform = 'none';
+        });
     }
 
     function initHeader() {

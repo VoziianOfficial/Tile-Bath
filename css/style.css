@@ -3687,3 +3687,46 @@ footer .brand span:last-child,
     }
 }
 
+/* =========================
+   DISABLE ENTRANCE ANIMATIONS SITEWIDE
+   Everything appears immediately
+========================= */
+
+[data-aos],
+[data-aos].aos-init,
+[data-aos].aos-animate {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+.aos-init,
+.aos-animate {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+/* убираем прыжки от GSAP inline transform на секциях/карточках */
+section,
+article,
+.surface-card,
+.image-card,
+.tilt-card,
+.compare-image,
+.about-story-media,
+.about-hero-visual,
+.services-hero-directory-panel,
+.home-hero-bottom,
+.hero-actions,
+.quote-floating-card,
+.compare-content,
+.compare-points div {
+    opacity: 1 !important;
+}
+
+/* НЕ убиваем hover полностью, только entrance scale/translate */
+[data-aos] {
+    pointer-events: auto !important;
+}
