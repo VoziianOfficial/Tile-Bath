@@ -1925,9 +1925,7 @@
     }
 }
 
-/* =========================
-   FIX ABOUT STORY PHOTO JUMP
-========================= */
+
 
 .about-story .about-story-media,
 .about-story .about-story-media.aos-init,
@@ -1971,9 +1969,7 @@
     z-index: 3 !important;
 }
 
-/* =========================
-   ABOUT MODEL — COMPACT REDESIGN
-========================= */
+
 
 .about-model-redesign {
     padding: clamp(42px, 5.5vw, 78px) 0;
@@ -2004,7 +2000,7 @@
     gap: 12px;
 }
 
-/* compact light cards */
+
 .model-mini-card {
     position: relative;
     min-height: 190px;
@@ -2084,7 +2080,7 @@
     line-height: 1.55;
 }
 
-/* wide dark note */
+
 .model-wide-note {
     grid-column: 1 / -1;
     position: relative;
@@ -2161,7 +2157,7 @@
     line-height: 1.62;
 }
 
-/* Responsive */
+
 @media (max-width: 980px) {
     .about-model-redesign-grid {
         grid-template-columns: 1fr;
@@ -2192,9 +2188,7 @@
     }
 }
 
-/* =========================
-   MODEL WIDE NOTE — PHOTO BACKGROUND + LIGHT CONTENT
-========================= */
+
 
 .about-model-redesign .model-wide-note,
 .model-wide-note.aos-init,
@@ -2214,7 +2208,7 @@
         url("../assets/images/about/about-story-window.jpg") center / cover no-repeat !important;
 }
 
-/* мягкий тёплый блик поверх фото */
+
 .about-model-redesign .model-wide-note::after,
 .model-wide-note.aos-init::after,
 .model-wide-note.aos-animate::after {
@@ -2228,7 +2222,7 @@
         radial-gradient(circle at 12% 90%, rgba(246, 242, 236, 0.08), transparent 32%);
 }
 
-/* чтобы весь контент был поверх фото */
+
 .about-model-redesign .model-wide-note>*,
 .model-wide-note.aos-init>*,
 .model-wide-note.aos-animate>* {
@@ -2236,7 +2230,7 @@
     z-index: 3 !important;
 }
 
-/* иконка */
+
 .about-model-redesign .model-wide-note i,
 .about-model-redesign .model-wide-note svg,
 .model-wide-note.aos-init i,
@@ -2248,28 +2242,26 @@
     box-shadow: none !important;
 }
 
-/* label Important */
+
 .about-model-redesign .model-wide-note span,
 .model-wide-note.aos-init span {
     color: var(--color-accent-light) !important;
 }
 
-/* заголовок */
+
 .about-model-redesign .model-wide-note h3,
 .model-wide-note.aos-init h3 {
     color: var(--color-text-light) !important;
     text-shadow: 0 8px 28px rgba(28, 26, 25, 0.34);
 }
 
-/* текст */
+
 .about-model-redesign .model-wide-note p,
 .model-wide-note.aos-init p {
     color: rgba(243, 238, 231, 0.76) !important;
 }
 
-/* =========================
-   ABOUT CTA — COMPACT JUICY GLOW
-========================= */
+
 
 .about-cta-compact {
     position: relative;
@@ -2482,7 +2474,7 @@
     }
 }
 
-/* Responsive */
+
 @media (max-width: 980px) {
     .about-cta-compact .about-cta-card {
         grid-template-columns: 1fr !important;
@@ -2526,10 +2518,7 @@
     }
 }
 
-/* =========================
-   VALUES IMAGE — FULL CARD COVER
-   Stretch photo only, do not move the card
-========================= */
+
 
 .about-values .values-image,
 .about-values .values-image-main {
@@ -2538,7 +2527,7 @@
     min-height: 560px !important;
     background: var(--color-dark) !important;
 
-    /* карточку не двигаем */
+    
     transform: none !important;
     scale: none !important;
 }
@@ -2556,12 +2545,12 @@
     object-fit: cover !important;
     object-position: center center !important;
 
-    /* фото не увеличиваем и не двигаем */
+    
     transform: none !important;
     scale: 1 !important;
 }
 
-/* убираем hover zoom, чтобы фото не прыгало */
+
 .about-values .values-image:hover img,
 .about-values .values-image-main:hover img {
     transform: none !important;
@@ -2569,13 +2558,13 @@
     filter: saturate(1.03) contrast(1.03);
 }
 
-/* overlay поверх фото */
+
 .about-values .values-image::after,
 .about-values .values-image-main::after {
     z-index: 2 !important;
 }
 
-/* адаптив */
+
 @media (max-width: 1180px) {
 
     .about-values .values-image,

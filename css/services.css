@@ -1344,10 +1344,7 @@
     }
 }
 
-/* =========================
-   SERVICES REQUEST REPLACEMENT — CHOICE LENS
-   No form, no numbers, no card-in-card
-========================= */
+
 
 .services-choice-lens {
     position: relative;
@@ -1413,7 +1410,7 @@
     margin-top: 6px;
 }
 
-/* Right side: not cards, just editorial rows */
+
 .choice-lens-board {
     position: relative;
     display: grid;
@@ -1543,14 +1540,14 @@
     line-height: 1.62;
 }
 
-/* Kill old form/card influence if old classes accidentally remain */
+
 .services-choice-lens .form-card,
 .services-choice-lens .services-mini-form,
 .services-choice-lens .surface-card {
     display: none !important;
 }
 
-/* Responsive */
+
 @media (max-width: 980px) {
     .choice-lens-layout {
         grid-template-columns: 1fr;
@@ -1594,9 +1591,7 @@
         width: 100%;
     }
 }
-/* =========================
-   SERVICES HERO — PHOTO CENTERED
-========================= */
+
 
 .services-hero-photo {
     position: relative;
@@ -1704,7 +1699,7 @@
     border-color: var(--color-accent);
 }
 
-/* Bottom navigation */
+
 .services-hero-nav {
     width: min(100%, 1180px);
     display: flex;
@@ -1806,7 +1801,7 @@
     white-space: nowrap;
 }
 
-/* убираем старые элементы, если случайно остались */
+
 .services-hero-photo .services-hero-directory-panel,
 .services-hero-photo .services-hero-mini-grid,
 .services-hero-photo .services-directory-footer,
@@ -1814,7 +1809,7 @@
     display: none !important;
 }
 
-/* Responsive */
+
 @media (max-width: 980px) {
     .services-hero-photo {
         min-height: auto;
@@ -1867,7 +1862,7 @@
     }
 }
 
-/* Fix Browse Categories button text on services hero */
+
 .services-hero-photo .hero-actions .btn-outline {
     --btn-color: var(--color-text-light) !important;
     --btn-border: rgba(243, 238, 231, 0.42) !important;
@@ -1882,7 +1877,7 @@
     stroke: currentColor !important;
 }
 
-/* hover */
+
 .services-hero-photo .hero-actions .btn-outline:hover {
     color: var(--color-dark) !important;
     border-color: var(--color-accent) !important;
@@ -1894,16 +1889,13 @@
     stroke: currentColor !important;
 }
 
-/* =========================
-   SAFE FIX — SERVICES DIRECTORY CARD CONTENT
-   Keeps original layout, only fixes readability
-========================= */
+
 
 .services-directory .service-route-card.image-card {
     color: var(--color-text-light) !important;
 }
 
-/* Сделать overlay чуть темнее, но не ломать карточку */
+
 .services-directory .service-route-card.image-card::after {
     background:
         linear-gradient(180deg,
@@ -1916,14 +1908,14 @@
             transparent 100%) !important;
 }
 
-/* Контент поверх фото */
+
 .services-directory .service-route-card .image-card-content {
     position: relative !important;
     z-index: 3 !important;
     color: var(--color-text-light) !important;
 }
 
-/* Заголовки светлые */
+
 .services-directory .service-route-card .image-card-content h3 {
     color: var(--color-text-light) !important;
     min-height: 2em;
@@ -1931,7 +1923,7 @@
     align-items: flex-end;
 }
 
-/* Текст светлый и одинаковый по высоте */
+
 .services-directory .service-route-card .image-card-content p {
     color: rgba(243, 238, 231, 0.76) !important;
     min-height: 4.2em;
@@ -1941,7 +1933,7 @@
     overflow: hidden;
 }
 
-/* Иконки видимые, но без перестройки */
+
 .services-directory .service-route-card .image-card-icon {
     z-index: 4 !important;
     color: var(--color-accent-light) !important;
@@ -1955,7 +1947,7 @@
     stroke: currentColor !important;
 }
 
-/* Если номер всё ещё есть — скрываем, но не трогаем layout */
+
 .services-directory .service-route-card .service-card-number {
     display: none !important;
 }

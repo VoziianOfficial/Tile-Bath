@@ -1281,10 +1281,7 @@
     }
 }
 
-/* =========================
-   SERVICE REQUEST — HORIZONTAL NO FORM
-   For all individual service pages
-========================= */
+
 
 .service-request-horizontal {
     position: relative;
@@ -1363,7 +1360,7 @@
     line-height: 1.62;
 }
 
-/* horizontal rail, not a form/card grid */
+
 .service-request-horizontal__rail {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1467,14 +1464,14 @@
     stroke: currentColor !important;
 }
 
-/* Kill old form if it accidentally remains */
+
 .service-request-horizontal .service-form,
 .service-request-horizontal .form-card,
 .service-request-horizontal .service-request-note {
     display: none !important;
 }
 
-/* Responsive */
+
 @media (max-width: 1180px) {
     .service-request-horizontal__shell {
         grid-template-columns: 1fr;
@@ -1515,10 +1512,7 @@
     }
 }
 
-/* =========================
-   SERVICE REQUEST — SLIM DARK SHINE
-   Very compact, no form, no photo, no map
-========================= */
+
 
 .service-request-slim {
     position: relative;
@@ -1530,7 +1524,7 @@
     color: var(--color-text-light) !important;
 }
 
-/* moving shine */
+
 .service-request-slim::before {
     content: "";
     position: absolute;
@@ -1669,7 +1663,7 @@
     stroke: currentColor !important;
 }
 
-/* убираем старую форму, если случайно осталась */
+
 .service-request-slim .service-form,
 .service-request-slim .form-card,
 .service-request-slim .service-request-note {

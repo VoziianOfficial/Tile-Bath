@@ -1741,10 +1741,7 @@ background:
     }
 }
 
-/* =========================
-   CONTACT HERO — CLEAN HORIZONTAL PHOTO HERO
-   No form, centered content, horizontal nav
-========================= */
+
 
 .contact-hero-clean {
     position: relative;
@@ -1860,7 +1857,7 @@ background:
     border-color: var(--color-accent) !important;
 }
 
-/* horizontal nav */
+
 .contact-hero-nav {
     width: min(100%, 1120px);
     display: grid;
@@ -1975,7 +1972,7 @@ background:
     white-space: nowrap;
 }
 
-/* hide old form/visual if old classes accidentally remain */
+
 .contact-hero-clean .contact-hero-form,
 .contact-hero-clean .contact-hero-card,
 .contact-hero-clean .contact-hero-visual,
@@ -1985,7 +1982,7 @@ background:
     display: none !important;
 }
 
-/* responsive */
+
 @media (max-width: 980px) {
     .contact-hero-clean {
         min-height: auto;
@@ -2038,9 +2035,7 @@ background:
     }
 }
 
-/* =========================
-   CONTACT AREA — PHOTO VERSION
-========================= */
+
 
 .contact-area-photo-section {
     padding: clamp(44px, 5vw, 72px) 0;
@@ -2054,7 +2049,7 @@ background:
     max-width: 1560px;
 }
 
-/* centered heading */
+
 .contact-area-photo-section .contact-area-head.centered-head {
     max-width: 1080px;
     margin: 0 auto clamp(24px, 3vw, 38px);
@@ -2074,7 +2069,7 @@ background:
     color: var(--color-muted);
 }
 
-/* photo block instead of map */
+
 .contact-area-photo-card {
     position: relative;
     overflow: hidden;
@@ -2145,7 +2140,7 @@ background:
     line-height: 1.58;
 }
 
-/* steps */
+
 .contact-area-steps-compact {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2203,7 +2198,7 @@ background:
     line-height: 1.52;
 }
 
-/* responsive */
+
 @media (max-width: 980px) {
     .contact-area-steps-compact {
         grid-template-columns: 1fr;
@@ -2227,9 +2222,7 @@ background:
     }
 }
 
-/* =========================
-   FIX CONTACT AREA HEAD — CENTERED TITLE + TEXT BELOW
-========================= */
+
 
 .contact-area-photo-section .contact-area-head,
 .contact-area-section .contact-area-head.centered-head {
@@ -2246,7 +2239,7 @@ background:
     text-align: center !important;
 }
 
-/* если внутри остался старый div-обертка */
+
 .contact-area-photo-section .contact-area-head>div,
 .contact-area-section .contact-area-head.centered-head>div {
     width: 100% !important;

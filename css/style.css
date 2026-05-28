@@ -9,35 +9,35 @@
 
 
 :root {
-    /* Base dark colors from the reference */
+    
     --color-bg-dark: #1C1A19;
     --color-bg-deep: #24211F;
     --color-bg-cocoa: #2E2926;
     --color-bg-soft-dark: #3A342F;
 
-    /* Light / white sections */
+    
     --color-bg-light: #F6F2EC;
     --color-bg-cream: #EEE6DC;
     --color-white: #FFFFFF;
 
-    /* Text */
+    
     --color-text-dark: #211E1C;
     --color-text-light: #F3EEE7;
     --color-text-muted: #8C8177;
 
-    /* Bronze-beige accent */
+    
     --color-accent: #B79B7F;
     --color-accent-hover: #A88B6D;
     --color-accent-strong: #8E755D;
     --color-accent-light: #D8C2AA;
     --color-accent-soft: #EEE2D3;
 
-    /* Borders */
+    
     --color-border: #D7C9B8;
     --color-border-dark: rgba(243, 238, 231, 0.14);
     --color-line-dark: rgba(255, 255, 255, 0.10);
 
-    /* Compatibility with existing CSS */
+    
     --color-bg: #F6F2EC;
     --color-bg-soft: #EEE6DC;
     --color-dark: #1C1A19;
@@ -2959,9 +2959,7 @@ button,
     }
 }
 
-/* =========================
-   TILE & BATH LOGO
-========================= */
+
 
 .brand {
     display: inline-flex;
@@ -2991,9 +2989,7 @@ button,
     display: none !important;
 }
 
-/* =========================
-   SQUARE BUTTONS GLOBALLY
-========================= */
+
 
 button,
 input[type="button"],
@@ -3013,7 +3009,7 @@ input[type="reset"],
 
 
 
-/* Brand text in header */
+
 header .brand,
 .site-header .brand,
 [data-site-header] .brand {
@@ -3026,7 +3022,7 @@ header .brand span:last-child,
     color: #1C1A19 !important;
 }
 
-/* Brand text in footer */
+
 footer .brand,
 .site-footer .brand,
 .footer-brand .brand {
@@ -3039,9 +3035,7 @@ footer .brand span:last-child,
     color: #F3EEE7 !important;
 }
 
-/* =========================
-   THEMED STEP ICONS (NO NUMBER BADGES)
-========================= */
+
 
 .section-icon {
     width: 34px !important;
@@ -3112,9 +3106,7 @@ footer .brand span:last-child,
     margin-top: 2px;
 }
 
-/* =========================
-   CONTRAST UTILITIES
-========================= */
+
 
 .section-on-light {
     color: var(--color-text);
@@ -3171,7 +3163,7 @@ footer .brand span:last-child,
     color: var(--color-accent-light);
 }
 
-/* Contextual light-section readability fixes */
+
 :where(.home-service-strip,
     .home-process,
     .home-quote-editorial,
@@ -3332,7 +3324,7 @@ footer .brand span:last-child,
     color: var(--color-accent-strong);
 }
 
-/* Keep dark components readable even inside light sections */
+
 :where(.home-service-strip,
     .home-process,
     .home-quote-editorial,
@@ -3413,7 +3405,7 @@ footer .brand span:last-child,
     color: rgba(243, 238, 231, 0.68);
 }
 
-/* Button contrast on light backgrounds */
+
 :where(.section-on-light,
     .home-service-strip,
     .home-process,
@@ -3480,7 +3472,7 @@ footer .brand span:last-child,
     color: var(--color-text) !important;
 }
 
-/* Form readability on light backgrounds */
+
 :where(.section-on-light,
     .home-service-strip,
     .home-process,
@@ -3549,7 +3541,7 @@ footer .brand span:last-child,
     color: rgba(140, 129, 119, 0.75) !important;
 }
 
-/* Decorative text tint helper */
+
 .section-on-light .decorative-word,
 .section-on-light .decorative-text {
     color: rgba(28, 26, 25, 0.04);
@@ -3568,9 +3560,7 @@ footer .brand span:last-child,
     scale: 1 !important;
 }
 
-/* =========================
-   FIX HERO ACTION BUTTON ICONS
-========================= */
+
 
 .hero-actions .btn {
     color: inherit;
@@ -3582,7 +3572,7 @@ footer .brand span:last-child,
     stroke: currentColor !important;
 }
 
-/* Если кнопка светлая/бронзовая — иконка тёмная */
+
 .hero-actions .btn-accent,
 .hero-actions .btn-primary:hover,
 .hero-actions .btn-light {
@@ -3599,7 +3589,7 @@ footer .brand span:last-child,
     stroke: currentColor !important;
 }
 
-/* Если кнопка тёмная — иконка светлая */
+
 .hero-actions .btn-primary {
     color: var(--color-text-light) !important;
 }
@@ -3610,7 +3600,7 @@ footer .brand span:last-child,
     stroke: currentColor !important;
 }
 
-/* Outline на тёмном hero */
+
 .home-hero .hero-actions .btn-outline {
     color: var(--color-text-light) !important;
     border-color: rgba(243, 238, 231, 0.38) !important;
@@ -3633,35 +3623,33 @@ footer .brand span:last-child,
     stroke: currentColor !important;
 }
 
-/* =========================
-   FINAL FIX — MARQUEE SECTION SPACING
-========================= */
+
 
 .section.home-marquee-section {
     padding-top: clamp(10px, 1.4vw, 20px) !important;
     padding-bottom: clamp(10px, 1.4vw, 20px) !important;
 }
 
-/* уменьшаем саму бегущую строку внутри */
+
 .section.home-marquee-section .bath-marquee__item {
     min-height: 52px !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
 }
 
-/* чуть компактнее иконки */
+
 .section.home-marquee-section .bath-marquee__item i,
 .section.home-marquee-section .bath-marquee__item svg {
     width: 18px !important;
     height: 18px !important;
 }
 
-/* чуть компактнее текст */
+
 .section.home-marquee-section .bath-marquee__item span {
     font-size: clamp(0.68rem, 0.82vw, 0.78rem) !important;
 }
 
-/* mobile */
+
 @media (max-width: 720px) {
     .section.home-marquee-section {
         padding-top: 8px !important;
@@ -3675,10 +3663,7 @@ footer .brand span:last-child,
     }
 }
 
-/* =========================
-   DISABLE ENTRANCE ANIMATIONS SITEWIDE
-   Everything appears immediately
-========================= */
+
 
 [data-aos],
 [data-aos].aos-init,
@@ -3696,7 +3681,7 @@ footer .brand span:last-child,
     transition: none !important;
 }
 
-/* убираем прыжки от GSAP inline transform на секциях/карточках */
+
 section,
 article,
 .surface-card,
@@ -3714,7 +3699,287 @@ article,
     opacity: 1 !important;
 }
 
-/* НЕ убиваем hover полностью, только entrance scale/translate */
+
 [data-aos] {
     pointer-events: auto !important;
+}
+
+/* =========================
+   GLOBAL CARD JUICE + PREMIUM SHINE
+   Safe sitewide enhancement
+========================= */
+
+:where(.surface-card,
+    .image-card,
+    .home-service-card,
+    .service-route-card,
+    .provider-check-card,
+    .model-card,
+    .model-mini-card,
+    .model-wide-note,
+    .review-check,
+    .compliance-item,
+    .values-stack article,
+    .contact-area-steps article,
+    .contact-area-steps-compact article,
+    .services-hero-mini-card,
+    .mobile-service-link,
+    .dropdown-service-link,
+    .faq-item,
+    .hero-stat) {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    transition:
+        transform 0.28s var(--ease-out),
+        border-color 0.28s var(--ease-out),
+        background 0.28s var(--ease-out),
+        box-shadow 0.28s var(--ease-out),
+        filter 0.28s var(--ease-out);
+}
+
+/* мягкий общий shine-слой */
+:where(.surface-card,
+    .home-service-card,
+    .service-route-card,
+    .provider-check-card,
+    .model-card,
+    .model-mini-card,
+    .model-wide-note,
+    .review-check,
+    .compliance-item,
+    .values-stack article,
+    .contact-area-steps article,
+    .contact-area-steps-compact article,
+    .services-hero-mini-card,
+    .mobile-service-link,
+    .dropdown-service-link,
+    .faq-item,
+    .hero-stat)::before {
+    content: "";
+    position: absolute;
+    inset: -45% auto -45% -75%;
+    z-index: 1;
+    width: 52%;
+    pointer-events: none;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.18),
+            rgba(183, 155, 127, 0.22),
+            transparent);
+    transform: skewX(-18deg);
+    opacity: 0;
+    transition:
+        left 0.72s var(--ease-out),
+        opacity 0.28s var(--ease-out);
+}
+
+/* чтобы контент был поверх блеска */
+:where(.surface-card,
+    .home-service-card,
+    .service-route-card,
+    .provider-check-card,
+    .model-card,
+    .model-mini-card,
+    .model-wide-note,
+    .review-check,
+    .compliance-item,
+    .values-stack article,
+    .contact-area-steps article,
+    .contact-area-steps-compact article,
+    .services-hero-mini-card,
+    .mobile-service-link,
+    .dropdown-service-link,
+    .faq-item,
+    .hero-stat)>* {
+    position: relative;
+    z-index: 3;
+}
+
+/* hover — сочнее, но без сильного прыжка */
+:where(.surface-card,
+    .home-service-card,
+    .service-route-card,
+    .provider-check-card,
+    .model-card,
+    .model-mini-card,
+    .model-wide-note,
+    .review-check,
+    .compliance-item,
+    .values-stack article,
+    .contact-area-steps article,
+    .contact-area-steps-compact article,
+    .services-hero-mini-card,
+    .mobile-service-link,
+    .dropdown-service-link,
+    .faq-item,
+    .hero-stat):hover {
+    border-color: rgba(183, 155, 127, 0.72) !important;
+    box-shadow:
+        0 18px 46px rgba(28, 26, 25, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+    filter: saturate(1.04) contrast(1.02);
+}
+
+/* сам проходящий блеск */
+:where(.surface-card,
+    .home-service-card,
+    .service-route-card,
+    .provider-check-card,
+    .model-card,
+    .model-mini-card,
+    .model-wide-note,
+    .review-check,
+    .compliance-item,
+    .values-stack article,
+    .contact-area-steps article,
+    .contact-area-steps-compact article,
+    .services-hero-mini-card,
+    .mobile-service-link,
+    .dropdown-service-link,
+    .faq-item,
+    .hero-stat):hover::before {
+    left: 125%;
+    opacity: 1;
+}
+
+/* лёгкая нижняя акцентная линия на hover */
+:where(.surface-card,
+    .home-service-card,
+    .provider-check-card,
+    .model-card,
+    .model-mini-card,
+    .review-check,
+    .compliance-item,
+    .values-stack article,
+    .contact-area-steps article,
+    .contact-area-steps-compact article,
+    .services-hero-mini-card,
+    .mobile-service-link,
+    .dropdown-service-link,
+    .faq-item,
+    .hero-stat)::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 0;
+    z-index: 2;
+    height: 1px;
+    pointer-events: none;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(183, 155, 127, 0.95),
+            transparent);
+    opacity: 0;
+    transition: opacity 0.28s var(--ease-out);
+}
+
+:where(.surface-card,
+    .home-service-card,
+    .provider-check-card,
+    .model-card,
+    .model-mini-card,
+    .review-check,
+    .compliance-item,
+    .values-stack article,
+    .contact-area-steps article,
+    .contact-area-steps-compact article,
+    .services-hero-mini-card,
+    .mobile-service-link,
+    .dropdown-service-link,
+    .faq-item,
+    .hero-stat):hover::after {
+    opacity: 1;
+}
+
+/* Image cards: не трогаем overlay ::after, только делаем фото сочнее */
+:where(.image-card, .service-route-card, .home-service-card):hover img {
+    filter: saturate(1.08) contrast(1.04) brightness(1.02);
+}
+
+/* Иконки становятся чуть выразительнее */
+:where(.surface-card,
+    .image-card,
+    .home-service-card,
+    .service-route-card,
+    .provider-check-card,
+    .model-card,
+    .model-mini-card,
+    .model-wide-note,
+    .review-check,
+    .compliance-item,
+    .values-stack article,
+    .contact-area-steps article,
+    .contact-area-steps-compact article,
+    .services-hero-mini-card,
+    .mobile-service-link,
+    .dropdown-service-link,
+    .hero-stat):hover i,
+:where(.surface-card,
+    .image-card,
+    .home-service-card,
+    .service-route-card,
+    .provider-check-card,
+    .model-card,
+    .model-mini-card,
+    .model-wide-note,
+    .review-check,
+    .compliance-item,
+    .values-stack article,
+    .contact-area-steps article,
+    .contact-area-steps-compact article,
+    .services-hero-mini-card,
+    .mobile-service-link,
+    .dropdown-service-link,
+    .hero-stat):hover svg {
+    color: var(--color-accent-light);
+    stroke: currentColor;
+    transform: translateY(-2px);
+}
+
+/* На мобильных убираем активный блеск, чтобы не было лишней дерготни */
+@media (max-width: 760px) {
+
+    :where(.surface-card,
+        .image-card,
+        .home-service-card,
+        .service-route-card,
+        .provider-check-card,
+        .model-card,
+        .model-mini-card,
+        .model-wide-note,
+        .review-check,
+        .compliance-item,
+        .values-stack article,
+        .contact-area-steps article,
+        .contact-area-steps-compact article,
+        .services-hero-mini-card,
+        .mobile-service-link,
+        .dropdown-service-link,
+        .faq-item,
+        .hero-stat)::before {
+        display: none;
+    }
+
+    :where(.surface-card,
+        .image-card,
+        .home-service-card,
+        .service-route-card,
+        .provider-check-card,
+        .model-card,
+        .model-mini-card,
+        .model-wide-note,
+        .review-check,
+        .compliance-item,
+        .values-stack article,
+        .contact-area-steps article,
+        .contact-area-steps-compact article,
+        .services-hero-mini-card,
+        .mobile-service-link,
+        .dropdown-service-link,
+        .faq-item,
+        .hero-stat):hover {
+        transform: none !important;
+    }
 }
