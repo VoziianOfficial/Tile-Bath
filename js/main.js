@@ -498,13 +498,6 @@
             if (!trigger || !menu) return;
 
             trigger.addEventListener('click', (event) => {
-                const clickedIcon = event.target.closest('i, svg');
-
-                if (!clickedIcon) {
-                    window.location.href = 'services.html';
-                    return;
-                }
-
                 event.preventDefault();
                 event.stopPropagation();
 
@@ -516,6 +509,18 @@
                     closeDropdown(dropdown);
                 } else {
                     openDropdown(dropdown);
+                }
+            });
+
+            trigger.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    trigger.click();
+                }
+
+                if (event.key === 'Escape') {
+                    closeDropdown(dropdown);
+                    trigger.focus();
                 }
             });
 
