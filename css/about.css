@@ -2526,3 +2526,76 @@
     }
 }
 
+/* =========================
+   VALUES IMAGE — FULL CARD COVER
+   Stretch photo only, do not move the card
+========================= */
+
+.about-values .values-image,
+.about-values .values-image-main {
+    position: relative !important;
+    overflow: hidden !important;
+    min-height: 560px !important;
+    background: var(--color-dark) !important;
+
+    /* карточку не двигаем */
+    transform: none !important;
+    scale: none !important;
+}
+
+.about-values .values-image img,
+.about-values .values-image-main img {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+
+    /* фото не увеличиваем и не двигаем */
+    transform: none !important;
+    scale: 1 !important;
+}
+
+/* убираем hover zoom, чтобы фото не прыгало */
+.about-values .values-image:hover img,
+.about-values .values-image-main:hover img {
+    transform: none !important;
+    scale: 1 !important;
+    filter: saturate(1.03) contrast(1.03);
+}
+
+/* overlay поверх фото */
+.about-values .values-image::after,
+.about-values .values-image-main::after {
+    z-index: 2 !important;
+}
+
+/* адаптив */
+@media (max-width: 1180px) {
+
+    .about-values .values-image,
+    .about-values .values-image-main {
+        min-height: 520px !important;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .about-values .values-image,
+    .about-values .values-image-main {
+        min-height: 360px !important;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .about-values .values-image,
+    .about-values .values-image-main {
+        min-height: 300px !important;
+    }
+}
