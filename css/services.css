@@ -7,8 +7,8 @@
     overflow: hidden;
     padding: clamp(88px, 9vw, 124px) 0 clamp(28px, 4vw, 52px);
     background:
-        radial-gradient(circle at 88% 10%, rgba(185, 166, 129, 0.24), transparent 34%),
-        linear-gradient(180deg, var(--color-bg) 0%, rgba(221, 215, 202, 0.76) 100%);
+        radial-gradient(circle at 88% 10%, rgba(183, 155, 127, 0.24), transparent 34%),
+        linear-gradient(180deg, var(--color-bg) 0%, rgba(238, 230, 220, 0.76) 100%);
     color: var(--color-text);
 }
 
@@ -17,8 +17,8 @@
     inset: 0;
     pointer-events: none;
     background-image:
-        linear-gradient(rgba(52, 58, 50, 0.055) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(52, 58, 50, 0.055) 1px, transparent 1px);
+        linear-gradient(rgba(46, 41, 38, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(46, 41, 38, 0.055) 1px, transparent 1px);
     background-size: 44px 44px;
     opacity: 0.52;
 }
@@ -30,7 +30,7 @@
     right: 0;
     bottom: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(52, 58, 50, 0.24), transparent);
+    background: linear-gradient(90deg, transparent, rgba(46, 41, 38, 0.24), transparent);
 }
 
 .services-hero-shell {
@@ -72,8 +72,8 @@
     grid-template-columns: 42px 1fr;
     gap: 14px;
     padding: 14px;
-    border: 1px solid rgba(189, 182, 168, 0.84);
-    background: rgba(251, 248, 241, 0.5);
+    border: 1px solid rgba(215, 201, 184, 0.84);
+    background: rgba(246, 242, 236, 0.5);
 }
 
 .services-hero-note i,
@@ -81,8 +81,8 @@
     width: 42px;
     height: 42px;
     padding: 10px;
-    border: 1px solid rgba(52, 58, 50, 0.16);
-    background: rgba(185, 166, 129, 0.16);
+    border: 1px solid rgba(46, 41, 38, 0.16);
+    background: rgba(183, 155, 127, 0.16);
     color: var(--color-dark);
 }
 
@@ -98,10 +98,10 @@
     position: relative;
     overflow: hidden;
     padding: clamp(16px, 2vw, 22px);
-    border: 1px solid rgba(189, 182, 168, 0.88);
+    border: 1px solid rgba(215, 201, 184, 0.88);
     background:
-        radial-gradient(circle at 100% 0%, rgba(185, 166, 129, 0.22), transparent 35%),
-        rgba(251, 248, 241, 0.56);
+        radial-gradient(circle at 100% 0%, rgba(183, 155, 127, 0.22), transparent 35%),
+        rgba(246, 242, 236, 0.56);
     box-shadow: var(--shadow-card);
 }
 
@@ -109,7 +109,7 @@
     content: "";
     position: absolute;
     inset: 12px;
-    border: 1px solid rgba(52, 58, 50, 0.08);
+    border: 1px solid rgba(46, 41, 38, 0.08);
     pointer-events: none;
 }
 
@@ -125,7 +125,7 @@
     align-items: end;
     margin-bottom: 14px;
     padding-bottom: 14px;
-    border-bottom: 1px solid rgba(52, 58, 50, 0.14);
+    border-bottom: 1px solid rgba(46, 41, 38, 0.14);
 }
 
 .services-directory-head span {
@@ -160,8 +160,8 @@
     align-content: space-between;
     gap: 9px;
     padding: 14px;
-    border: 1px solid rgba(189, 182, 168, 0.78);
-    background: rgba(251, 248, 241, 0.48);
+    border: 1px solid rgba(215, 201, 184, 0.78);
+    background: rgba(246, 242, 236, 0.48);
     color: var(--color-text);
     transition:
         transform 0.3s var(--ease-out),
@@ -173,8 +173,8 @@
 .services-hero-mini-card:hover {
     transform: translateY(-4px);
     border-color: var(--color-accent);
-    background: rgba(251, 248, 241, 0.78);
-    box-shadow: 0 18px 48px rgba(25, 27, 24, 0.09);
+    background: rgba(246, 242, 236, 0.78);
+    box-shadow: 0 18px 48px rgba(28, 26, 25, 0.09);
 }
 
 .services-hero-mini-card i,
@@ -215,7 +215,7 @@
     gap: 10px;
     margin-top: 14px;
     padding-top: 14px;
-    border-top: 1px solid rgba(52, 58, 50, 0.14);
+    border-top: 1px solid rgba(46, 41, 38, 0.14);
 }
 
 .services-directory-footer span {
@@ -223,8 +223,8 @@
     display: inline-flex;
     align-items: center;
     padding: 7px 10px;
-    border: 1px solid rgba(52, 58, 50, 0.14);
-    background: rgba(185, 166, 129, 0.14);
+    border: 1px solid rgba(46, 41, 38, 0.14);
+    background: rgba(183, 155, 127, 0.14);
     color: var(--color-muted-dark);
     font-family: var(--font-accent);
     font-size: 0.62rem;
@@ -239,7 +239,7 @@
     padding: clamp(26px, 3vw, 44px) 0;
     overflow: hidden;
     background:
-        linear-gradient(180deg, var(--color-bg) 0%, rgba(221, 215, 202, 0.48) 100%);
+        linear-gradient(180deg, var(--color-bg) 0%, rgba(238, 230, 220, 0.48) 100%);
 }
 
 .services-directory .container-wide {
@@ -371,7 +371,7 @@
     width: 22px;
     height: 3px;
     border-radius: 0;
-    background: rgba(52, 58, 50, 0.24);
+    background: rgba(46, 41, 38, 0.24);
     opacity: 1;
     transition:
         width 0.24s var(--ease-out),
@@ -431,8 +431,8 @@
     width: 46px;
     height: 46px;
     padding: 12px;
-    border: 1px solid rgba(52, 58, 50, 0.18);
-    background: rgba(185, 166, 129, 0.16);
+    border: 1px solid rgba(46, 41, 38, 0.18);
+    background: rgba(183, 155, 127, 0.16);
     color: var(--color-dark);
 }
 
@@ -475,7 +475,7 @@
     position: relative;
     overflow: hidden;
     min-height: clamp(360px, 38vw, 560px);
-    border: 1px solid rgba(189, 182, 168, 0.78);
+    border: 1px solid rgba(215, 201, 184, 0.78);
     background: var(--color-bg-soft);
     box-shadow: var(--shadow-card);
 }
@@ -485,8 +485,8 @@
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(180deg, rgba(25, 27, 24, 0.04), rgba(25, 27, 24, 0.34)),
-        radial-gradient(circle at 24% 18%, rgba(185, 166, 129, 0.14), transparent 28%);
+        linear-gradient(180deg, rgba(28, 26, 25, 0.04), rgba(28, 26, 25, 0.34)),
+        radial-gradient(circle at 24% 18%, rgba(183, 155, 127, 0.14), transparent 28%);
 }
 
 .compare-image img {
@@ -506,9 +506,9 @@
     align-content: center;
     gap: clamp(14px, 1.8vw, 22px);
     padding: clamp(24px, 4vw, 52px);
-    border: 1px solid rgba(189, 182, 168, 0.78);
+    border: 1px solid rgba(215, 201, 184, 0.78);
     background:
-        linear-gradient(145deg, rgba(251, 248, 241, 0.76), rgba(221, 215, 202, 0.62));
+        linear-gradient(145deg, rgba(246, 242, 236, 0.76), rgba(238, 230, 220, 0.62));
     box-shadow: var(--shadow-card);
 }
 
@@ -535,11 +535,11 @@
     grid-template-columns: 150px 1fr;
     gap: 14px;
     padding: 14px 0;
-    border-top: 1px solid rgba(52, 58, 50, 0.16);
+    border-top: 1px solid rgba(46, 41, 38, 0.16);
 }
 
 .compare-points div:last-child {
-    border-bottom: 1px solid rgba(52, 58, 50, 0.16);
+    border-bottom: 1px solid rgba(46, 41, 38, 0.16);
 }
 
 .compare-points strong {
@@ -560,7 +560,7 @@
 
 .services-request {
     background:
-        linear-gradient(180deg, rgba(221, 215, 202, 0.62), var(--color-bg));
+        linear-gradient(180deg, rgba(238, 230, 220, 0.62), var(--color-bg));
 }
 
 .request-layout {
@@ -587,13 +587,13 @@
     width: 38px;
     height: 38px;
     padding: 9px;
-    border: 1px solid rgba(251, 248, 241, 0.2);
-    background: rgba(251, 248, 241, 0.08);
+    border: 1px solid rgba(246, 242, 236, 0.2);
+    background: rgba(246, 242, 236, 0.08);
     color: var(--color-accent);
 }
 
 .request-note p {
-    color: rgba(251, 248, 241, 0.72);
+    color: rgba(246, 242, 236, 0.72);
     font-size: 0.94rem;
     line-height: 1.68;
 }
@@ -605,7 +605,7 @@
 
 .services-mini-form.is-active {
     border-color: var(--color-accent);
-    box-shadow: 0 24px 70px rgba(25, 27, 24, 0.15);
+    box-shadow: 0 24px 70px rgba(28, 26, 25, 0.15);
 }
 
 
@@ -631,7 +631,7 @@
 
 
 .service-route-card.is-key-focused {
-    outline: 3px solid rgba(185, 166, 129, 0.75);
+    outline: 3px solid rgba(183, 155, 127, 0.75);
     outline-offset: 4px;
 }
 
@@ -812,8 +812,8 @@
         linear-gradient(90deg,
             rgba(241, 237, 228, 0.58) 0%,
             rgba(241, 237, 228, 0.44) 42%,
-            rgba(221, 215, 202, 0.18) 68%,
-            rgba(52, 58, 50, 0.06) 100%),
+            rgba(238, 230, 220, 0.18) 68%,
+            rgba(46, 41, 38, 0.06) 100%),
         linear-gradient(180deg,
             rgba(241, 237, 228, 0.18) 0%,
             rgba(241, 237, 228, 0.34) 100%),
@@ -827,7 +827,7 @@
     z-index: 1;
     pointer-events: none;
     background:
-        radial-gradient(circle at 18% 20%, rgba(185, 166, 129, 0.08), transparent 30%),
+        radial-gradient(circle at 18% 20%, rgba(183, 155, 127, 0.08), transparent 30%),
         linear-gradient(180deg, transparent 0%, rgba(241, 237, 228, 0.22) 100%);
 }
 
@@ -852,26 +852,26 @@
 }
 
 .services-hero-directory .page-title {
-    text-shadow: 0 10px 32px rgba(251, 248, 241, 0.24);
+    text-shadow: 0 10px 32px rgba(246, 242, 236, 0.24);
 }
 
 .services-hero-directory .services-hero-directory-panel {
     background:
-        linear-gradient(145deg, rgba(251, 248, 241, 0.58), rgba(221, 215, 202, 0.32)),
-        radial-gradient(circle at 100% 0%, rgba(185, 166, 129, 0.12), transparent 36%);
+        linear-gradient(145deg, rgba(246, 242, 236, 0.58), rgba(238, 230, 220, 0.32)),
+        radial-gradient(circle at 100% 0%, rgba(183, 155, 127, 0.12), transparent 36%);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-color: rgba(251, 248, 241, 0.34);
+    border-color: rgba(246, 242, 236, 0.34);
 }
 
 .services-hero-directory .services-hero-mini-card {
-    background: rgba(251, 248, 241, 0.38);
+    background: rgba(246, 242, 236, 0.38);
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
 }
 
 .services-hero-directory .services-hero-mini-card:hover {
-    background: rgba(251, 248, 241, 0.66);
+    background: rgba(246, 242, 236, 0.66);
 }
 
 
@@ -881,7 +881,7 @@
             linear-gradient(180deg,
                 rgba(241, 237, 228, 0.58) 0%,
                 rgba(241, 237, 228, 0.46) 52%,
-                rgba(221, 215, 202, 0.34) 100%),
+                rgba(238, 230, 220, 0.34) 100%),
             url("../assets/images/services/services-hero.jpg") center / cover no-repeat;
     }
 
@@ -898,7 +898,7 @@
             linear-gradient(180deg,
                 rgba(241, 237, 228, 0.64) 0%,
                 rgba(241, 237, 228, 0.48) 52%,
-                rgba(221, 215, 202, 0.42) 100%),
+                rgba(238, 230, 220, 0.42) 100%),
             url("../assets/images/services/services-hero.jpg") center / cover no-repeat;
     }
 
@@ -911,45 +911,45 @@
 
 
 .services-hero-directory .eyebrow {
-    color: rgba(25, 27, 24, 0.86);
+    color: rgba(28, 26, 25, 0.86);
 }
 
 .services-hero-directory .page-title {
-    color: #11140F;
+    color: #211E1C;
     text-shadow:
-        0 2px 18px rgba(251, 248, 241, 0.72),
-        0 14px 42px rgba(251, 248, 241, 0.42);
+        0 2px 18px rgba(246, 242, 236, 0.72),
+        0 14px 42px rgba(246, 242, 236, 0.42);
 }
 
 .services-hero-directory .services-hero-copy>p {
-    color: rgba(25, 27, 24, 0.82);
+    color: rgba(28, 26, 25, 0.82);
     font-weight: 500;
 }
 
 .services-hero-directory .services-hero-note {
-    background: rgba(251, 248, 241, 0.62);
-    border-color: rgba(52, 58, 50, 0.18);
+    background: rgba(246, 242, 236, 0.62);
+    border-color: rgba(46, 41, 38, 0.18);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
 .services-hero-directory .services-hero-note p {
-    color: rgba(25, 27, 24, 0.78);
+    color: rgba(28, 26, 25, 0.78);
     font-weight: 500;
 }
 
 .services-hero-directory .services-directory-head strong,
 .services-hero-directory .services-hero-mini-card strong {
-    color: #141713;
+    color: #211E1C;
 }
 
 .services-hero-directory .services-hero-mini-card p {
-    color: rgba(25, 27, 24, 0.72);
+    color: rgba(28, 26, 25, 0.72);
     font-weight: 500;
 }
 
 .services-hero-directory .services-directory-footer span {
-    color: rgba(25, 27, 24, 0.78);
+    color: rgba(28, 26, 25, 0.78);
 }
 
 
@@ -960,8 +960,8 @@
         linear-gradient(90deg,
             rgba(241, 237, 228, 0.58) 0%,
             rgba(241, 237, 228, 0.42) 38%,
-            rgba(221, 215, 202, 0.22) 68%,
-            rgba(52, 58, 50, 0.08) 100%),
+            rgba(238, 230, 220, 0.22) 68%,
+            rgba(46, 41, 38, 0.08) 100%),
         linear-gradient(180deg,
             rgba(241, 237, 228, 0.22) 0%,
             rgba(241, 237, 228, 0.36) 100%),
@@ -975,8 +975,8 @@
     z-index: 1;
     pointer-events: none;
     background:
-        radial-gradient(circle at 16% 18%, rgba(185, 166, 129, 0.08), transparent 30%),
-        radial-gradient(circle at 88% 18%, rgba(52, 58, 50, 0.08), transparent 34%),
+        radial-gradient(circle at 16% 18%, rgba(183, 155, 127, 0.08), transparent 30%),
+        radial-gradient(circle at 88% 18%, rgba(46, 41, 38, 0.08), transparent 34%),
         linear-gradient(180deg, transparent 0%, rgba(241, 237, 228, 0.22) 100%);
 }
 
@@ -987,43 +987,43 @@
 
 
 .services-compare .compare-image {
-    border-color: rgba(251, 248, 241, 0.34);
-    box-shadow: 0 24px 70px rgba(25, 27, 24, 0.16);
+    border-color: rgba(246, 242, 236, 0.34);
+    box-shadow: 0 24px 70px rgba(28, 26, 25, 0.16);
 }
 
 .services-compare .compare-image::after {
     background:
-        linear-gradient(180deg, rgba(25, 27, 24, 0.02), rgba(25, 27, 24, 0.24)),
-        radial-gradient(circle at 24% 18%, rgba(185, 166, 129, 0.12), transparent 30%);
+        linear-gradient(180deg, rgba(28, 26, 25, 0.02), rgba(28, 26, 25, 0.24)),
+        radial-gradient(circle at 24% 18%, rgba(183, 155, 127, 0.12), transparent 30%);
 }
 
 
 .services-compare .compare-content {
     background:
-        linear-gradient(145deg, rgba(251, 248, 241, 0.58), rgba(221, 215, 202, 0.34)),
-        radial-gradient(circle at 100% 0%, rgba(185, 166, 129, 0.10), transparent 34%);
-    border-color: rgba(251, 248, 241, 0.32);
+        linear-gradient(145deg, rgba(246, 242, 236, 0.58), rgba(238, 230, 220, 0.34)),
+        radial-gradient(circle at 100% 0%, rgba(183, 155, 127, 0.10), transparent 34%);
+    border-color: rgba(246, 242, 236, 0.32);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 24px 70px rgba(25, 27, 24, 0.12);
+    box-shadow: 0 24px 70px rgba(28, 26, 25, 0.12);
 }
 
 
 .services-compare .compare-content .eyebrow {
-    color: rgba(25, 27, 24, 0.82);
+    color: rgba(28, 26, 25, 0.82);
 }
 
 .services-compare .compare-content .section-title {
-    color: #11140F;
+    color: #211E1C;
 }
 
 .services-compare .compare-content p,
 .services-compare .compare-points span {
-    color: rgba(25, 27, 24, 0.76);
+    color: rgba(28, 26, 25, 0.76);
 }
 
 .services-compare .compare-points strong {
-    color: #141713;
+    color: #211E1C;
 }
 
 
@@ -1033,7 +1033,7 @@
             linear-gradient(180deg,
                 rgba(241, 237, 228, 0.58) 0%,
                 rgba(241, 237, 228, 0.46) 52%,
-                rgba(221, 215, 202, 0.34) 100%),
+                rgba(238, 230, 220, 0.34) 100%),
             url("../assets/images/services/provider-comparison-window.jpg") center / cover no-repeat;
     }
 }
@@ -1044,7 +1044,7 @@
             linear-gradient(180deg,
                 rgba(241, 237, 228, 0.66) 0%,
                 rgba(241, 237, 228, 0.52) 54%,
-                rgba(221, 215, 202, 0.42) 100%),
+                rgba(238, 230, 220, 0.42) 100%),
             url("../assets/images/services/provider-comparison-window.jpg") center / cover no-repeat;
     }
 
@@ -1280,8 +1280,8 @@
     position: relative;
     overflow: hidden;
     background:
-        radial-gradient(circle at 12% 18%, rgba(251, 248, 241, 0.34), transparent 30%),
-        radial-gradient(circle at 88% 12%, rgba(52, 58, 50, 0.10), transparent 34%),
+        radial-gradient(circle at 12% 18%, rgba(246, 242, 236, 0.34), transparent 30%),
+        radial-gradient(circle at 88% 12%, rgba(46, 41, 38, 0.10), transparent 34%),
         linear-gradient(135deg, var(--color-line) 0%, #D0C9BA 48%, var(--color-line) 100%) !important;
 }
 
@@ -1291,8 +1291,8 @@
     inset: 0;
     pointer-events: none;
     background-image:
-        linear-gradient(rgba(52, 58, 50, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(52, 58, 50, 0.05) 1px, transparent 1px);
+        linear-gradient(rgba(46, 41, 38, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(46, 41, 38, 0.05) 1px, transparent 1px);
     background-size: 42px 42px;
     opacity: 0.32;
 }
@@ -1305,22 +1305,22 @@
 .services-faq .faq-copy .eyebrow,
 .services-faq .faq-copy .section-title,
 .services-faq .faq-copy .section-kicker {
-    color: #191B18;
+    color: #211E1C;
 }
 
 .services-faq .faq-item {
-    background: rgba(251, 248, 241, 0.56);
-    border-color: rgba(52, 58, 50, 0.16);
+    background: rgba(246, 242, 236, 0.56);
+    border-color: rgba(46, 41, 38, 0.16);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
 .services-faq .faq-question {
-    color: #191B18;
+    color: #211E1C;
 }
 
 .services-faq .faq-answer p {
-    color: rgba(25, 27, 24, 0.72);
+    color: rgba(28, 26, 25, 0.72);
 }
 
 
